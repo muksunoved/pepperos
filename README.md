@@ -8,9 +8,12 @@ Tag          | Link
 ------------ | -------------
 1-example    | https://habr.com/ru/company/neobit/blog/173263/
 2-example    | https://habr.com/ru/company/neobit/blog/174157/
+3-example    | https://habr.com/ru/company/neobit/blog/176707/
 
 
 ## Build
+
+System: Ubuntu 18.04 gcc version gcc-7.5.0
 
 ```
 $ make all
