@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -Wall -fno-builtin -nostdinc -nostdlib -m32
+CFLAGS  = -Wall -fno-builtin -nostdinc -nostdlib -m32 -ggdb3
 LD      = ld
 AS		= as
 
@@ -55,6 +55,8 @@ rebuild: clean all
 	$(CC) -Iinclude $(CFLAGS) -o $@ -c $<
 kernel.bin: $(OBJFILES)
 	$(LD) --verbose -m elf_i386 -T src/linker.ld -o $@ $^
+	cp $@ $@.dbg
+	strip $@
 clean:
 	rm -f $(OBJFILES) hdd.img kernel.bin
 
