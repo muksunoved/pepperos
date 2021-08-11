@@ -7,6 +7,7 @@ OBJFILES = \
 	src/loader.o  \
 	common/printf.o  \
 	common/screen.o  \
+	src/pci.o \
 	src/kernel.o
 
 image:
